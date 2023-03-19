@@ -3,4 +3,5 @@ Creating a news application with MVVM model in RxSwift.
 
 Following is the screenshot:
 
-![simulator_screenshot_2B86A8C1-EA97-4822-B408-B5682C910602](https://user-images.githubusercontent.com/81296575/226156641-69621717-3eac-4f7f-b740-e89edb411258.png)
+<img width="519" alt="스크린샷 2023-03-19 오후 3 03 02" src="https://user-images.githubusercontent.com/81296575/226156709-ae9b4132-18d0-44de-9052-7d36044a5cd4.png">
+
