@@ -6,13 +6,29 @@
 //
 
 import UIKit
+import RxSwift
 
 class NewsTableViewController: UITableViewController {
+    
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        populateNews()
+    }
+    
+    private func populateNews() {
+        
+        let resource = Resource<ArticlesList>(url: URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=b85fd2ea4fda4570a2cd9e191a05f021")!)
+        
+        URLRequest.load(resource: resource)
+            .subscribe(onNext: {
+                print($0)
+            }).disposed(by: disposeBag)
+        
     }
 
     // MARK: - Table view data source
